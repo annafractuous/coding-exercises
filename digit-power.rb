@@ -27,6 +27,11 @@ def dig_pow(n, p)
   sum % n == 0 ? sum/n : -1
 end
 
+# def dig_pow(n, p)
+#   sum = n.to_s.each_char.map.with_index { |digit, idx| digit.to_i ** (p + idx) }.reduce(:+)
+#   sum % n == 0 ? sum/n : -1
+# end
+
 puts dig_pow(89, 1) # should return 1 since 8¹ + 9² = 89 = 89 * 1
 puts dig_pow(92, 1) # should return -1 since there is no k such as 9¹ + 2² equals 92 * k
 puts dig_pow(695, 2) # should return 2 since 6² + 9³ + 5⁴= 1390 = 695 * 2
